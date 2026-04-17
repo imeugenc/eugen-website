@@ -1,7 +1,7 @@
 import { ArrowUpRight, ChevronRight, Mail, Play, Smartphone } from "@/components/icons";
 import { AppPreview } from "@/components/app-preview";
 import { SectionHeading } from "@/components/section-heading";
-import { markets, socials } from "@/components/site-data";
+import { appBenefits, tradeGroups, tradingConcepts, workPrinciples } from "@/components/site-data";
 
 const appLinks = {
   open: "#",
@@ -24,13 +24,16 @@ export default function HomePage() {
             </a>
             <nav className="hidden items-center gap-8 text-sm text-white/72 md:flex">
               <a href="#about" className="transition hover:text-white">
-                About
+                Despre
               </a>
               <a href="#markets" className="transition hover:text-white">
-                What I Trade
+                Ce tranzacționez
+              </a>
+              <a href="#process" className="transition hover:text-white">
+                Cum lucrez
               </a>
               <a href="#app" className="transition hover:text-white">
-                The App
+                Aplicația
               </a>
               <a href="#contact" className="transition hover:text-white">
                 Contact
@@ -46,32 +49,31 @@ export default function HomePage() {
           <div className="max-w-2xl animate-rise opacity-0 [animation-delay:120ms] [animation-fill-mode:forwards]">
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-gold-300/20 bg-white/[0.03] px-4 py-2 text-xs uppercase tracking-[0.28em] text-gold-200">
               <span className="h-2 w-2 rounded-full bg-gold-300 shadow-[0_0_18px_rgba(210,180,108,0.7)]" />
-              Personal Website
+              Website personal
             </div>
             <h1 className="max-w-xl text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
-              Trader focused on structure, discipline and execution.
+              Trader de futures, focusat pe structură, disciplină și execuție.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-white/70 sm:text-lg">
-              This website presents Eugen Costache&apos;s personal trading perspective and the
-              mobile app he is building around clarity, consistency, and practical use. It is a
-              calm, direct space built to reflect process rather than hype.
+              Tranzacționez indici și crypto și construiesc o aplicație mobilă care reflectă modul
+              meu real de lucru: clar, simplu și aplicabil.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href={appLinks.open} className="button-primary">
-                Open the App
+                Deschide aplicația
                 <ArrowUpRight />
               </a>
               <a href={appLinks.about} className="button-secondary">
-                About Me
+                Despre mine
                 <ChevronRight />
               </a>
             </div>
-            <p className="mt-3 text-sm text-gold-200/78">App access coming soon.</p>
+            <p className="mt-3 text-sm text-gold-200/78">Aplicația va fi disponibilă în curând</p>
             <div className="mt-12 grid gap-5 border-t border-white/10 pt-8 sm:grid-cols-3">
               {[
-                ["Markets", "NASDAQ, US30, BTC, ETH"],
-                ["Approach", "Structured, selective, disciplined"],
-                ["Product", "Mobile-first trading companion"]
+                ["Piețe", "NASDAQ, ES, BTC, ETH"],
+                ["Abordare", "Structură, disciplină, execuție"],
+                ["Aplicație", "Aplicație mobilă în dezvoltare"]
               ].map(([label, value]) => (
                 <div key={label}>
                   <p className="text-xs uppercase tracking-[0.28em] text-gold-200/80">{label}</p>
@@ -91,34 +93,37 @@ export default function HomePage() {
 
         <section id="about" className="section-shell">
           <SectionHeading
-            eyebrow="About"
-            title="A personal project built around calm execution."
-            description="Eugen Costache works at the intersection of trading, product thinking, and disciplined self-direction. This website reflects his personal journey in the markets and the app project he is shaping around that experience."
+            eyebrow="Despre"
+            title="Tradingul și aplicația vin din același mod de lucru."
+            description="Nu sunt aici să predau trading și nu promit rezultate. Site-ul acesta reflectă modul meu real de lucru și aplicația pe care o construiesc în jurul lui."
           />
           <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="panel p-8 sm:p-10">
               <p className="text-lg leading-8 text-white/78">
-                Eugen approaches trading with a focus on structure, patience, and decision quality.
-                He is also building the mobile app showcased here as a practical extension of that
-                mindset: clean, intentional, and useful in real conditions.
+                Sunt trader de futures și crypto, iar focusul meu este pe structură, disciplină și
+                execuție constantă.
               </p>
               <p className="mt-6 text-base leading-7 text-white/62">
-                Rather than turning trading into spectacle, the goal is to keep the experience
-                grounded. The website and app are part of the same personal project, shaped by
-                observation, iteration, and a preference for clarity over noise.
+                Lucrez în principal pe piețe precum NASDAQ și S&amp;P 500 pentru intraday, iar pe
+                crypto urmăresc BTC, ETH și alte altcoins.
+              </p>
+              <p className="mt-6 text-base leading-7 text-white/62">
+                Aplicația pe care o dezvolt este construită în jurul modului meu real de lucru: un
+                spațiu simplu, organizat, fără zgomot inutil, care să mă ajute să rămân focusat și
+                disciplinat.
               </p>
             </div>
             <div className="panel flex flex-col justify-between p-8 sm:p-10">
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-gold-200">Focus</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-gold-200">Concepte</p>
                 <ul className="mt-5 space-y-4 text-sm text-white/72">
-                  <li>Trader with a disciplined, process-led perspective.</li>
-                  <li>Builder creating a mobile-first product around personal workflow.</li>
-                  <li>Creator treating the website as a clear reflection of that journey.</li>
+                  {tradingConcepts.map((concept) => (
+                    <li key={concept}>{concept}</li>
+                  ))}
                 </ul>
               </div>
               <a href="#app" className="mt-10 inline-flex items-center gap-2 text-sm text-gold-200">
-                Explore the app
+                Vezi aplicația
                 <ArrowUpRight />
               </a>
             </div>
@@ -127,12 +132,12 @@ export default function HomePage() {
 
         <section id="markets" className="section-shell">
           <SectionHeading
-            eyebrow="What I Trade"
-            title="A concise market focus."
-            description="The focus stays narrow, deliberate, and professional. Each market below reflects a preference for structure, rhythm, and clarity."
+            eyebrow="Piețe"
+            title="Ce tranzacționez"
+            description="Focusul meu este restrâns și clar. Urmăresc doar piețele care se potrivesc modului meu de lucru și contextului din ziua respectivă."
           />
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {markets.map((market, index) => (
+            {tradeGroups.map((market, index) => (
               <article
                 key={market.name}
                 className="panel group min-h-[240px] p-7 transition duration-300 hover:-translate-y-1 hover:border-gold-300/30"
@@ -144,63 +149,97 @@ export default function HomePage() {
                     {market.name}
                   </h3>
                   <p className="mt-4 text-sm leading-7 text-white/65">{market.description}</p>
-                  <div className="mt-auto pt-8 text-sm text-white/42">Selective focus</div>
+                  <div className="mt-auto pt-8 text-sm text-white/42">{market.tag}</div>
                 </div>
               </article>
             ))}
           </div>
         </section>
 
+        <section id="process" className="section-shell">
+          <SectionHeading
+            eyebrow="Proces"
+            title="Cum lucrez"
+            description="Nu urmăresc setupuri „magice” și nu tranzacționez pe bază de semnale."
+          />
+          <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
+            <div className="panel p-8 sm:p-10">
+              <p className="text-lg leading-8 text-white/78">
+                Mă bazez pe structură, lichiditate și reacții reale în zone importante, nu pe
+                ideea că piața trebuie să îmi confirme o opinie dinainte.
+              </p>
+              <ul className="mt-8 space-y-4 text-sm text-white/72">
+                {workPrinciples.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="panel p-8 sm:p-10">
+              <p className="text-base leading-7 text-white/68">
+                Obiectivul meu nu este să am dreptate de fiecare dată, ci să execut corect,
+                constant și disciplinat.
+              </p>
+              <p className="mt-6 text-base leading-7 text-white/62">
+                Tradingul pentru mine este un proces, nu un shortcut.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section id="app" className="section-shell">
           <SectionHeading
-            eyebrow="The App"
-            title="A mobile-first tool designed for practical use."
-            description="The app section positions the product as clean, usable, and focused. It is not about noise or aggressive promotion, but about offering a direct experience that fits modern mobile habits."
+            eyebrow="Aplicația"
+            title="Aplicația"
+            description="Construiesc o aplicație mobilă care reflectă exact modul în care gândesc și lucrez."
           />
           <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="panel p-8 sm:p-10">
               <div className="inline-flex items-center gap-3 rounded-full border border-gold-300/20 bg-gold-300/8 px-4 py-2 text-xs uppercase tracking-[0.25em] text-gold-200">
                 <Smartphone />
-                Mobile-first product
+                Gândită pentru mobil
               </div>
               <h3 className="mt-8 text-3xl font-medium tracking-[-0.04em] text-white sm:text-4xl">
-                Clear on the phone, strong on the brand.
+                Simplu, organizat și gândit pentru utilizare reală.
               </h3>
               <p className="mt-5 max-w-xl text-base leading-7 text-white/68">
-                The experience is designed to feel direct and refined, with a strong visual identity
-                and a practical interface. This site introduces that product and encourages visitors
-                to open it, download it, and keep it close.
+                Nu este o aplicație de semnale și nu promite rezultate.
+              </p>
+              <ul className="mt-6 space-y-4 text-sm text-white/72">
+                {appBenefits.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <p className="mt-6 max-w-xl text-base leading-7 text-white/62">
+                Totul este gândit pentru mobil: rapid, clar și fără complicații.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <a href={appLinks.open} className="button-primary">
-                  Open the App
+                  Coming Soon
                   <ArrowUpRight />
                 </a>
                 <a href={appLinks.appStore} className="button-secondary">
-                  App Store
+                  Coming Soon
                   <Play />
                 </a>
                 <a href={appLinks.googlePlay} className="button-secondary">
-                  Google Play
+                  Coming Soon
                   <Play />
                 </a>
               </div>
-              <p className="mt-4 text-sm text-gold-200/78">
-                Coming Soon. Store links and direct access will be added when the app is ready.
-              </p>
+              <p className="mt-4 text-sm text-gold-200/78">Coming Soon</p>
             </div>
 
             <div className="panel relative overflow-hidden p-6 sm:p-8">
               <div className="absolute inset-x-12 top-8 h-24 rounded-full bg-gold-300/10 blur-3xl" />
               <div className="relative grid gap-6 md:grid-cols-[0.6fr_0.4fr] md:items-end">
                 <div className="rounded-[2rem] border border-white/10 bg-white/[0.025] p-6">
-                  <p className="text-xs uppercase tracking-[0.3em] text-gold-200">Showcase</p>
+                  <p className="text-xs uppercase tracking-[0.3em] text-gold-200">Previzualizare</p>
                   <h4 className="mt-4 text-2xl font-medium tracking-[-0.03em] text-white">
-                    Elegant presentation for a serious product.
+                    O extensie firească a modului meu de lucru.
                   </h4>
                   <p className="mt-4 text-sm leading-7 text-white/62">
-                    The visual language stays restrained: dark surfaces, refined spacing, precise
-                    hierarchy, and subtle motion that feels premium on both desktop and mobile.
+                    Aplicația este gândită ca un tool personal, curat și ușor de folosit, fără
+                    elemente inutile și fără zgomot suplimentar.
                   </p>
                 </div>
                 <div className="mx-auto w-full max-w-[220px] animate-pulseSoft">
@@ -218,8 +257,11 @@ export default function HomePage() {
               <div>
                 <p className="text-xs uppercase tracking-[0.32em] text-gold-200">Contact</p>
                 <h2 className="mt-5 max-w-2xl text-3xl font-medium tracking-[-0.04em] text-white sm:text-4xl">
-                  For direct contact or to explore the app, use the links below.
+                  Pentru moment, acesta este singurul canal de contact.
                 </h2>
+                <p className="mt-6 max-w-2xl text-base leading-7 text-white/62">
+                  Conturile de social media vor fi adăugate în curând.
+                </p>
                 <div className="mt-8 flex flex-col gap-4 text-white/70 sm:flex-row sm:flex-wrap sm:items-center">
                   <a
                     href="mailto:c.eugenbroker@gmail.com"
@@ -228,21 +270,11 @@ export default function HomePage() {
                     <Mail />
                     c.eugenbroker@gmail.com
                   </a>
-                  {socials.map((social) => (
-                    <a
-                      key={social.label}
-                      href={social.href}
-                      className="inline-flex items-center gap-2 text-sm transition hover:text-white"
-                    >
-                      {social.label}
-                      <ArrowUpRight />
-                    </a>
-                  ))}
                 </div>
               </div>
 
               <a href={appLinks.open} className="button-primary">
-                Open the App
+                Coming Soon
                 <ArrowUpRight />
               </a>
             </div>

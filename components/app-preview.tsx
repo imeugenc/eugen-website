@@ -15,10 +15,10 @@ export function AppPreview({ compact = false }: AppPreviewProps) {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-[10px] uppercase tracking-[0.24em] text-gold-200/80">EC App</p>
-              <p className="mt-2 text-lg font-medium text-white">Execution</p>
+              <p className="mt-2 text-lg font-medium text-white">Execuție</p>
             </div>
             <div className="rounded-full border border-gold-300/25 bg-gold-300/10 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-gold-200">
-              Live
+              Curând
             </div>
           </div>
 
@@ -26,21 +26,21 @@ export function AppPreview({ compact = false }: AppPreviewProps) {
             <div className="flex items-end justify-between">
               <div>
                 <p className="text-[11px] uppercase tracking-[0.24em] text-white/42">Focus</p>
-                <p className="mt-2 text-2xl font-medium tracking-[-0.04em] text-white">Discipline</p>
+                <p className="mt-2 text-2xl font-medium tracking-[-0.04em] text-white">Disciplină</p>
               </div>
               <div className="text-right">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-white/42">State</p>
-                <p className="mt-2 text-sm text-gold-200">Structured</p>
+                <p className="text-[11px] uppercase tracking-[0.24em] text-white/42">Stare</p>
+                <p className="mt-2 text-sm text-gold-200">Structurat</p>
               </div>
             </div>
           </div>
 
           <div className="mt-4 grid grid-cols-2 gap-3">
             {[
-              ["Markets", "NASDAQ / US30"],
-              ["Assets", "BTC / ETH"],
-              ["Style", "Calm, focused"],
-              ["Device", "Mobile-first"]
+              ["Piețe", "NASDAQ / ES"],
+              ["Crypto", "BTC / ETH"],
+              ["Stil", "Calm, focusat"],
+              ["Format", "Pentru mobil"]
             ].map(([label, value]) => (
               <div key={label} className="rounded-[1.25rem] border border-white/10 bg-black/20 p-3">
                 <p className="text-[10px] uppercase tracking-[0.24em] text-white/38">{label}</p>
@@ -52,11 +52,11 @@ export function AppPreview({ compact = false }: AppPreviewProps) {
           <div className="mt-4 rounded-[1.5rem] border border-gold-300/15 bg-gold-300/8 p-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.26em] text-gold-200/90">Action</p>
-                <p className="mt-2 text-base font-medium text-white">Open the App</p>
+                <p className="text-[10px] uppercase tracking-[0.26em] text-gold-200/90">Acțiune</p>
+                <p className="mt-2 text-base font-medium text-white">Coming Soon</p>
               </div>
               <div className="rounded-full bg-gold-300 px-3 py-2 text-xs font-medium text-black">
-                Launch
+                Curând
               </div>
             </div>
           </div>
