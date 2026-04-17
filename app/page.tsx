@@ -1,7 +1,13 @@
 import { ArrowUpRight, ChevronRight, Mail, Play, Smartphone } from "@/components/icons";
 import { AppPreview } from "@/components/app-preview";
 import { SectionHeading } from "@/components/section-heading";
-import { appBenefits, tradeGroups, tradingConcepts, workPrinciples } from "@/components/site-data";
+import {
+  aboutHighlights,
+  appBenefits,
+  tradeCategories,
+  tradingConcepts,
+  workPrinciples
+} from "@/components/site-data";
 
 const appLinks = {
   open: "#",
@@ -24,7 +30,7 @@ export default function HomePage() {
             </a>
             <nav className="hidden items-center gap-8 text-sm text-white/72 md:flex">
               <a href="#about" className="transition hover:text-white">
-                Despre
+                Despre mine
               </a>
               <a href="#markets" className="transition hover:text-white">
                 Ce tranzacționez
@@ -44,23 +50,27 @@ export default function HomePage() {
 
         <section
           id="top"
-          className="grid flex-1 items-center gap-16 py-12 md:py-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12"
+          className="grid flex-1 items-center gap-16 py-16 md:py-20 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16 lg:py-24"
         >
           <div className="max-w-2xl animate-rise opacity-0 [animation-delay:120ms] [animation-fill-mode:forwards]">
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-gold-300/20 bg-white/[0.03] px-4 py-2 text-xs uppercase tracking-[0.28em] text-gold-200">
               <span className="h-2 w-2 rounded-full bg-gold-300 shadow-[0_0_18px_rgba(210,180,108,0.7)]" />
               Website personal
             </div>
-            <h1 className="max-w-xl text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
-              Trader de futures, focusat pe structură, disciplină și execuție.
+            <p className="text-sm uppercase tracking-[0.32em] text-white/42">Eugen Costache</p>
+            <h1 className="mt-5 max-w-2xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] text-white sm:text-6xl lg:text-[4.7rem]">
+              Trader de futures.
+              <span className="mt-2 block text-white/92">
+                Focus pe structură, disciplină și execuție.
+              </span>
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-7 text-white/70 sm:text-lg">
+            <p className="mt-7 max-w-lg text-base leading-7 text-white/70 sm:text-lg">
               Tranzacționez indici și crypto și construiesc o aplicație mobilă care reflectă modul
               meu real de lucru: clar, simplu și aplicabil.
             </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
               <a href={appLinks.open} className="button-primary">
-                Deschide aplicația
+                Aplicația (în curând)
                 <ArrowUpRight />
               </a>
               <a href={appLinks.about} className="button-secondary">
@@ -68,8 +78,8 @@ export default function HomePage() {
                 <ChevronRight />
               </a>
             </div>
-            <p className="mt-3 text-sm text-gold-200/78">Aplicația va fi disponibilă în curând</p>
-            <div className="mt-12 grid gap-5 border-t border-white/10 pt-8 sm:grid-cols-3">
+            <p className="mt-3 text-sm text-gold-200/78">Aplicația va fi disponibilă în curând.</p>
+            <div className="mt-14 grid gap-5 border-t border-white/10 pt-8 sm:grid-cols-3">
               {[
                 ["Piețe", "NASDAQ, ES, BTC, ETH"],
                 ["Abordare", "Structură, disciplină, execuție"],
@@ -94,18 +104,25 @@ export default function HomePage() {
         <section id="about" className="section-shell">
           <SectionHeading
             eyebrow="Despre"
-            title="Tradingul și aplicația vin din același mod de lucru."
-            description="Nu sunt aici să predau trading și nu promit rezultate. Site-ul acesta reflectă modul meu real de lucru și aplicația pe care o construiesc în jurul lui."
+            title="Despre mine"
+            description="Un proiect personal construit în jurul clarității și execuției."
           />
           <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="panel p-8 sm:p-10">
-              <p className="text-lg leading-8 text-white/78">
+              <p className="text-sm uppercase tracking-[0.28em] text-gold-200/82">
+                Nu sunt aici să predau trading și nu promit rezultate.
+              </p>
+              <p className="mt-6 text-lg leading-8 text-white/78">
                 Sunt trader de futures și crypto, iar focusul meu este pe structură, disciplină și
                 execuție constantă.
               </p>
               <p className="mt-6 text-base leading-7 text-white/62">
-                Lucrez în principal pe piețe precum NASDAQ și S&amp;P 500 pentru intraday, iar pe
-                crypto urmăresc BTC, ETH și alte altcoins.
+                Lucrez în principal pe indici pentru intraday și urmăresc activ BTC, ETH și alte
+                altcoins în funcție de context.
+              </p>
+              <p className="mt-6 text-base leading-7 text-white/62">
+                Folosesc concepte precum market structure, lichiditate, ICT / SMC, footprint și
+                volume profile pentru a înțelege mai bine contextul și reacțiile pieței.
               </p>
               <p className="mt-6 text-base leading-7 text-white/62">
                 Aplicația pe care o dezvolt este construită în jurul modului meu real de lucru: un
@@ -113,14 +130,31 @@ export default function HomePage() {
                 disciplinat.
               </p>
             </div>
+
             <div className="panel flex flex-col justify-between p-8 sm:p-10">
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-gold-200">Concepte</p>
-                <ul className="mt-5 space-y-4 text-sm text-white/72">
-                  {tradingConcepts.map((concept) => (
-                    <li key={concept}>{concept}</li>
+                <p className="text-xs uppercase tracking-[0.3em] text-gold-200">Repere</p>
+                <ul className="mt-5 space-y-3 text-sm text-white/72">
+                  {aboutHighlights.map((item) => (
+                    <li
+                      key={item}
+                      className="rounded-[1.25rem] border border-white/10 bg-white/[0.025] px-4 py-4"
+                    >
+                      {item}
+                    </li>
                   ))}
                 </ul>
+                <p className="mt-8 text-xs uppercase tracking-[0.3em] text-gold-200">Concepte</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {tradingConcepts.map((concept) => (
+                    <span
+                      key={concept}
+                      className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-xs text-white/64"
+                    >
+                      {concept}
+                    </span>
+                  ))}
+                </div>
               </div>
               <a href="#app" className="mt-10 inline-flex items-center gap-2 text-sm text-gold-200">
                 Vezi aplicația
@@ -134,25 +168,25 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Piețe"
             title="Ce tranzacționez"
-            description="Focusul meu este restrâns și clar. Urmăresc doar piețele care se potrivesc modului meu de lucru și contextului din ziua respectivă."
+            description="Un focus clar, selectiv și practic."
           />
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {tradeGroups.map((market, index) => (
-              <article
-                key={market.name}
-                className="panel group min-h-[240px] p-7 transition duration-300 hover:-translate-y-1 hover:border-gold-300/30"
-                style={{ animationDelay: `${index * 120}ms` }}
-              >
-                <div className="flex h-full flex-col">
-                  <p className="text-xs uppercase tracking-[0.3em] text-gold-200/85">{market.tag}</p>
-                  <h3 className="mt-6 text-2xl font-medium tracking-[-0.03em] text-white">
-                    {market.name}
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-white/65">{market.description}</p>
-                  <div className="mt-auto pt-8 text-sm text-white/42">{market.tag}</div>
-                </div>
-              </article>
-            ))}
+          <div className="panel overflow-hidden">
+            <div className="grid gap-0 divide-y divide-white/8 lg:grid-cols-3 lg:divide-x lg:divide-y-0">
+              {tradeCategories.map((category) => (
+                <article key={category.title} className="p-8 sm:p-10">
+                  <p className="text-xs uppercase tracking-[0.3em] text-gold-200/85">
+                    {category.title}
+                  </p>
+                  <ul className="mt-8 space-y-5">
+                    {category.items.map((item) => (
+                      <li key={item} className="border-l border-gold-300/20 pl-4">
+                        <p className="text-base leading-7 text-white/82">{item}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -163,24 +197,29 @@ export default function HomePage() {
             description="Nu urmăresc setupuri „magice” și nu tranzacționez pe bază de semnale."
           />
           <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
-            <div className="panel p-8 sm:p-10">
+            <div className="panel bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.02))] p-8 sm:p-10">
               <p className="text-lg leading-8 text-white/78">
-                Mă bazez pe structură, lichiditate și reacții reale în zone importante, nu pe
-                ideea că piața trebuie să îmi confirme o opinie dinainte.
+                Mă bazez pe structură, lichiditate și reacții în zone importante, nu pe ideea că
+                piața trebuie să îmi confirme o opinie dinainte.
               </p>
               <ul className="mt-8 space-y-4 text-sm text-white/72">
                 {workPrinciples.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li
+                    key={item}
+                    className="rounded-[1.25rem] border border-white/10 bg-black/20 px-4 py-4"
+                  >
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>
             <div className="panel p-8 sm:p-10">
-              <p className="text-base leading-7 text-white/68">
+              <p className="text-lg leading-8 text-white/78">
                 Obiectivul meu nu este să am dreptate de fiecare dată, ci să execut corect,
                 constant și disciplinat.
               </p>
               <p className="mt-6 text-base leading-7 text-white/62">
-                Tradingul pentru mine este un proces, nu un shortcut.
+                Tradingul pentru mine este un proces bazat pe disciplină, nu un shortcut.
               </p>
             </div>
           </div>
@@ -190,7 +229,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Aplicația"
             title="Aplicația"
-            description="Construiesc o aplicație mobilă care reflectă exact modul în care gândesc și lucrez."
+            description="Un tool gândit pentru claritate și uz real."
           />
           <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="panel p-8 sm:p-10">
@@ -199,9 +238,13 @@ export default function HomePage() {
                 Gândită pentru mobil
               </div>
               <h3 className="mt-8 text-3xl font-medium tracking-[-0.04em] text-white sm:text-4xl">
-                Simplu, organizat și gândit pentru utilizare reală.
+                Un tool gândit pentru claritate și uz real.
               </h3>
               <p className="mt-5 max-w-xl text-base leading-7 text-white/68">
+                Construiesc o aplicație mobilă care reflectă exact modul în care gândesc și
+                lucrez.
+              </p>
+              <p className="mt-6 max-w-xl text-base leading-7 text-white/62">
                 Nu este o aplicație de semnale și nu promite rezultate.
               </p>
               <ul className="mt-6 space-y-4 text-sm text-white/72">
@@ -214,19 +257,21 @@ export default function HomePage() {
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <a href={appLinks.open} className="button-primary">
-                  Coming Soon
+                  În curând
                   <ArrowUpRight />
                 </a>
                 <a href={appLinks.appStore} className="button-secondary">
-                  Coming Soon
+                  App Store
                   <Play />
                 </a>
                 <a href={appLinks.googlePlay} className="button-secondary">
-                  Coming Soon
+                  Google Play
                   <Play />
                 </a>
               </div>
-              <p className="mt-4 text-sm text-gold-200/78">Coming Soon</p>
+              <p className="mt-4 text-sm text-gold-200/78">
+                Linkurile și accesul direct vor fi adăugate când aplicația este gata.
+              </p>
             </div>
 
             <div className="panel relative overflow-hidden p-6 sm:p-8">
@@ -273,8 +318,8 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <a href={appLinks.open} className="button-primary">
-                Coming Soon
+              <a href={appLinks.open} className="button-secondary">
+                Aplicația în curând
                 <ArrowUpRight />
               </a>
             </div>

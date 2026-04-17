@@ -1,38 +1,18 @@
-export const tradeGroups = [
+export const tradeCategories = [
   {
-    tag: "Crypto",
-    name: "BTC și ETH",
-    description: "Le urmăresc constant pentru structură, lichiditate și context."
+    title: "Crypto",
+    items: [
+      "BTC și ETH",
+      "Altcoins (selectiv, în funcție de context și volatilitate)"
+    ]
   },
   {
-    tag: "Crypto",
-    name: "Altcoins",
-    description: "Selectiv, în funcție de context și volatilitate."
+    title: "Indici (intraday)",
+    items: ["NASDAQ (NQ)", "S&P 500 (ES)"]
   },
   {
-    tag: "Indici",
-    name: "NASDAQ (NQ)",
-    description: "Una dintre piețele principale pe care le urmăresc intraday."
-  },
-  {
-    tag: "Indici",
-    name: "S&P 500 (ES)",
-    description: "Piață de referință pentru execuție intraday și structură clară."
-  },
-  {
-    tag: "Ocazional",
-    name: "US30",
-    description: "Îl urmăresc atunci când contextul este clar și merită atenție."
-  },
-  {
-    tag: "Ocazional",
-    name: "Gold (GC)",
-    description: "Interes punctual, în funcție de reacții și fluxul din piață."
-  },
-  {
-    tag: "Ocazional",
-    name: "EUR/USD",
-    description: "Îl includ doar când oferă un context suficient de curat."
+    title: "Ocazional",
+    items: ["US30", "Gold (GC)", "EUR/USD"]
   }
 ] as const;
 
@@ -55,4 +35,10 @@ export const tradingConcepts = [
   "ICT / SMC",
   "footprint",
   "volume profile"
+] as const;
+
+export const aboutHighlights = [
+  "Trader de futures și crypto",
+  "Focus pe proces, nu pe hype",
+  "Aplicație construită în jurul workflow-ului meu real"
 ] as const;
