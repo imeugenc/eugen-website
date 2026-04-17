@@ -24,9 +24,9 @@ export const workPrinciples = [
 ] as const;
 
 export const appBenefits = [
-  "urmăresc piețele",
-  "rămân disciplinat",
-  "reduc zgomotul și haosul"
+  "Urmăresc piețele",
+  "Rămân disciplinat",
+  "Reduc zgomotul și haosul"
 ] as const;
 
 export const tradingConcepts = [

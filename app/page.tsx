@@ -126,8 +126,8 @@ export default function HomePage() {
               </p>
               <p className="mt-6 text-base leading-7 text-white/62">
                 Aplicația pe care o dezvolt este construită în jurul modului meu real de lucru: un
-                spațiu simplu, organizat, fără zgomot inutil, care să mă ajute să rămân focusat și
-                disciplinat.
+                spațiu simplu și organizat, prin care vreau să împărtășesc modul în care văd eu
+                piața, într-un mod clar și fără zgomot inutil.
               </p>
             </div>
 
