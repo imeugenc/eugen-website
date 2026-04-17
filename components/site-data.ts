@@ -30,11 +30,11 @@ export const appBenefits = [
 ] as const;
 
 export const tradingConcepts = [
-  "market structure",
-  "lichiditate",
+  "Market Structure",
+  "Lichiditate",
   "ICT / SMC",
-  "footprint",
-  "volume profile"
+  "Footprint",
+  "Volume Profile"
 ] as const;
 
 export const aboutHighlights = [

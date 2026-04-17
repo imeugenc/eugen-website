@@ -231,28 +231,39 @@ export default function HomePage() {
             title="Aplicația"
             description="Un tool gândit pentru claritate și uz real."
           />
-          <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-12">
             <div className="panel p-8 sm:p-10">
               <div className="inline-flex items-center gap-3 rounded-full border border-gold-300/20 bg-gold-300/8 px-4 py-2 text-xs uppercase tracking-[0.25em] text-gold-200">
                 <Smartphone />
                 Gândită pentru mobil
               </div>
-              <h3 className="mt-8 text-3xl font-medium tracking-[-0.04em] text-white sm:text-4xl">
+              <h3 className="mt-8 max-w-xl text-3xl font-medium tracking-[-0.04em] text-white sm:text-4xl">
                 Un tool gândit pentru claritate și uz real.
               </h3>
-              <p className="mt-5 max-w-xl text-base leading-7 text-white/68">
+              <p className="mt-6 max-w-lg text-base leading-7 text-white/68">
                 Construiesc o aplicație mobilă care reflectă exact modul în care gândesc și
                 lucrez.
               </p>
-              <p className="mt-6 max-w-xl text-base leading-7 text-white/62">
+              <p className="mt-6 max-w-lg text-base leading-7 text-white/62">
                 Nu este o aplicație de semnale și nu promite rezultate.
               </p>
-              <ul className="mt-6 space-y-4 text-sm text-white/72">
+              <p className="mt-6 max-w-lg text-base leading-7 text-white/62">
+                Aplicația este construită în jurul modului meu real de lucru: un spațiu simplu și
+                organizat, prin care împărtășesc perspectiva mea asupra pieței, într-un mod clar și
+                fără zgomot inutil.
+              </p>
+              <ul className="mt-8 max-w-md space-y-3">
                 {appBenefits.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 rounded-[1rem] border border-white/10 bg-white/[0.025] px-4 py-3 text-sm text-white/78"
+                  >
+                    <span className="h-2 w-2 rounded-full bg-gold-300" />
+                    {item}
+                  </li>
                 ))}
               </ul>
-              <p className="mt-6 max-w-xl text-base leading-7 text-white/62">
+              <p className="mt-8 max-w-lg text-base leading-7 text-white/62">
                 Totul este gândit pentru mobil: rapid, clar și fără complicații.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
@@ -260,11 +271,19 @@ export default function HomePage() {
                   În curând
                   <ArrowUpRight />
                 </a>
-                <a href={appLinks.appStore} className="button-secondary">
+                <a
+                  href={appLinks.appStore}
+                  aria-disabled="true"
+                  className="button-secondary cursor-default opacity-55"
+                >
                   App Store
                   <Play />
                 </a>
-                <a href={appLinks.googlePlay} className="button-secondary">
+                <a
+                  href={appLinks.googlePlay}
+                  aria-disabled="true"
+                  className="button-secondary cursor-default opacity-55"
+                >
                   Google Play
                   <Play />
                 </a>
@@ -274,20 +293,10 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="panel relative overflow-hidden p-6 sm:p-8">
-              <div className="absolute inset-x-12 top-8 h-24 rounded-full bg-gold-300/10 blur-3xl" />
-              <div className="relative grid gap-6 md:grid-cols-[0.6fr_0.4fr] md:items-end">
-                <div className="rounded-[2rem] border border-white/10 bg-white/[0.025] p-6">
-                  <p className="text-xs uppercase tracking-[0.3em] text-gold-200">Previzualizare</p>
-                  <h4 className="mt-4 text-2xl font-medium tracking-[-0.03em] text-white">
-                    O extensie firească a modului meu de lucru.
-                  </h4>
-                  <p className="mt-4 text-sm leading-7 text-white/62">
-                    Aplicația este gândită ca un tool personal, curat și ușor de folosit, fără
-                    elemente inutile și fără zgomot suplimentar.
-                  </p>
-                </div>
-                <div className="mx-auto w-full max-w-[220px] animate-pulseSoft">
+            <div className="panel relative overflow-hidden p-8 sm:p-10">
+              <div className="absolute inset-x-12 top-10 h-24 rounded-full bg-gold-300/10 blur-3xl" />
+              <div className="relative flex min-h-[420px] items-center justify-center">
+                <div className="mx-auto w-full max-w-[240px] animate-pulseSoft">
                   <AppPreview compact />
                 </div>
               </div>
