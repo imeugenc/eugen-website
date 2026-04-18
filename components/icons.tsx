@@ -28,6 +28,15 @@ export function Mail(props: IconProps) {
   );
 }
 
+export function XIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props} className={`h-4 w-4 ${props.className ?? ""}`}>
+      <path d="M5 5 19 19" />
+      <path d="M19 5 5 19" />
+    </svg>
+  );
+}
+
 export function Play(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props} className={`h-4 w-4 ${props.className ?? ""}`}>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight, ChevronRight, Play } from "@/components/icons";
+import { ArrowUpRight, ChevronRight, Mail, Play, XIcon } from "@/components/icons";
 import { SectionHeading } from "@/components/section-heading";
 import {
   aboutHighlights,
@@ -15,7 +15,9 @@ const appLinks = {
   open: "#",
   about: "#about",
   appStore: "#",
-  googlePlay: "#"
+  googlePlay: "#",
+  mail: "mailto:hello@marketmechanism.xyz",
+  x: "https://x.com/mktmechanism"
 };
 
 export default function HomePage() {
@@ -39,23 +41,43 @@ export default function HomePage() {
                 Market Mechanism
               </span>
             </a>
-            <nav className="hidden items-center gap-8 text-sm text-white/72 md:flex">
-              <a href="#about" className="transition hover:text-white">
-                Despre
-              </a>
-              <a href="#markets" className="transition hover:text-white">
-                Ce tranzacționez
-              </a>
-              <a href="#process" className="transition hover:text-white">
-                Cum lucrez
-              </a>
-              <a href="#app" className="transition hover:text-white">
-                Aplicația
-              </a>
-              <a href="#contact" className="transition hover:text-white">
-                Contact
-              </a>
-            </nav>
+            <div className="hidden items-center gap-6 md:flex">
+              <nav className="flex items-center gap-8 text-sm text-white/72">
+                <a href="#about" className="transition hover:text-white">
+                  Despre
+                </a>
+                <a href="#markets" className="transition hover:text-white">
+                  Ce tranzacționez
+                </a>
+                <a href="#process" className="transition hover:text-white">
+                  Cum lucrez
+                </a>
+                <a href="#app" className="transition hover:text-white">
+                  Aplicația
+                </a>
+                <a href="#contact" className="transition hover:text-white">
+                  Contact
+                </a>
+              </nav>
+              <div className="flex items-center gap-3 border-l border-white/10 pl-4 text-white/58">
+                <a
+                  href={appLinks.mail}
+                  aria-label="Email"
+                  className="transition hover:text-gold-200"
+                >
+                  <Mail className="h-4 w-4" />
+                </a>
+                <a
+                  href={appLinks.x}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="X"
+                  className="transition hover:text-gold-200"
+                >
+                  <XIcon className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
           </div>
         </header>
 
@@ -71,6 +93,9 @@ export default function HomePage() {
             <h1 className="mt-5 max-w-2xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] text-white sm:text-6xl lg:text-[4.7rem]">
               Structură. Disciplină. Execuție.
             </h1>
+            <p className="mt-5 text-sm font-light italic tracking-[0.12em] text-white/54 sm:text-[0.95rem]">
+              Structure over noise.
+            </p>
             <p className="mt-7 max-w-lg text-base leading-7 text-white/70 sm:text-lg">
               Un spațiu construit pentru claritate și proces, în care este prezentat modul în care
               este privită piața, fără zgomot inutil.
@@ -144,7 +169,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Despre"
             title="Un proiect construit în jurul clarității și execuției."
-            description="Un spațiu clar, disciplinat și atent structurat, prezentat fără zgomot inutil."
+            description="Un proiect construit în jurul clarității și execuției."
           />
           <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="panel p-8 sm:p-10">
@@ -197,7 +222,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Piețe"
             title="Ce tranzacționez"
-            description="Un focus selectiv, clar și construit pentru context real."
+            description="Un focus clar, selectiv și practic."
           />
           <div className="panel overflow-hidden">
             <div className="grid gap-0 divide-y divide-white/8 lg:grid-cols-3 lg:divide-x lg:divide-y-0">
@@ -223,7 +248,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Proces"
             title="Cum lucrez"
-            description="Fără semnale, fără zgomot și fără ideea unui shortcut."
+            description="Un proces construit pe structură, nu pe reacție."
           />
           <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
             <div className="panel bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.02))] p-8 sm:p-10">
@@ -244,12 +269,18 @@ export default function HomePage() {
             </div>
             <div className="panel p-8 sm:p-10">
               <p className="max-w-xl text-lg leading-9 text-white/78">
-                Obiectivul nu este să existe dreptate de fiecare dată, ci execuție corectă,
-                constantă și disciplinată.
+                Obiectivul nu este să existe dreptate de fiecare dată.
               </p>
-              <p className="mt-8 max-w-lg text-base leading-8 text-white/62">
-                Tradingul este un proces bazat pe disciplină, nu un shortcut.
+              <p className="mt-8 max-w-lg text-base leading-8 text-white/64">
+                Este execuția corectă, repetată, într-un cadru disciplinat.
               </p>
+              <p className="mt-8 max-w-lg text-base leading-8 text-white/64">
+                Deciziile nu sunt bazate pe impuls, ci pe structură, lichiditate și confirmare.
+              </p>
+              <p className="mt-8 max-w-lg text-base leading-8 text-white/64">
+                Tradingul nu este un shortcut.
+              </p>
+              <p className="mt-4 max-w-lg text-base leading-8 text-white/64">Este un proces.</p>
             </div>
           </div>
         </section>
@@ -258,7 +289,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Aplicația"
             title="Aplicația"
-            description="Un tool gândit pentru structură clară, uz real și execuție disciplinată."
+            description="Un tool creat pentru claritate și organizare."
           />
           <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start lg:gap-14">
             <div className="panel p-8 sm:p-10">
@@ -324,7 +355,6 @@ export default function HomePage() {
                 Linkurile și accesul direct vor fi adăugate când aplicația este gata.
               </p>
             </div>
-
             <div className="panel relative overflow-hidden p-8 sm:p-10">
               <div className="absolute inset-x-16 top-10 h-24 rounded-full bg-gold-300/10 blur-3xl" />
               <div className="relative grid gap-4">
@@ -357,40 +387,30 @@ export default function HomePage() {
         <section id="contact" className="section-shell pb-16">
           <div className="panel relative overflow-hidden p-8 sm:p-10">
             <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-gold-300/10 blur-3xl" />
-            <div className="relative grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
-              <div>
-                <p className="text-xs uppercase tracking-[0.32em] text-gold-200">Contact</p>
-                <h2 className="mt-5 max-w-2xl text-3xl font-medium tracking-[-0.04em] text-white sm:text-4xl">
-                  Canalul principal de contact, momentan.
-                </h2>
-                <p className="mt-8 max-w-xl text-base leading-7 text-white/66">
-                  Pentru moment, acesta este singurul canal de contact.
-                </p>
-                <p className="mt-5 max-w-xl text-base leading-7 text-white/66">
-                  Conturile de social media vor fi adăugate în curând.
-                </p>
-                <div className="mt-8 flex flex-col gap-4">
-                  <a
-                    href="mailto:hello@marketmechanism.xyz"
-                    className="w-fit text-base font-medium text-white/78 transition hover:text-gold-200 hover:underline"
-                  >
-                    hello@marketmechanism.xyz
-                  </a>
-                  <a
-                    href="https://x.com/mktmechanism"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="w-fit text-base font-medium text-white/78 transition hover:text-gold-200 hover:underline"
-                  >
-                    x.com/mktmechanism
-                  </a>
-                </div>
+            <div className="relative">
+              <SectionHeading
+                eyebrow="Contact"
+                title="Contact"
+                description="Canal direct de contact."
+              />
+              <div className="max-w-xl space-y-4">
+                <a
+                  href={appLinks.mail}
+                  className="inline-flex w-fit items-center gap-3 text-base font-medium text-white/78 transition hover:text-gold-200"
+                >
+                  <Mail className="h-4 w-4 text-white/48" />
+                  <span>hello@marketmechanism.xyz</span>
+                </a>
+                <a
+                  href={appLinks.x}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex w-fit items-center gap-3 text-base font-medium text-white/78 transition hover:text-gold-200"
+                >
+                  <XIcon className="h-4 w-4 text-white/48" />
+                  <span>x.com/mktmechanism</span>
+                </a>
               </div>
-
-              <a href={appLinks.open} className="button-secondary">
-                Aplicația în curând
-                <ArrowUpRight />
-              </a>
             </div>
           </div>
         </section>
