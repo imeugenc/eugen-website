@@ -3,23 +3,23 @@ type AppPreviewProps = {
 };
 
 export function AppPreview({ compact = false }: AppPreviewProps) {
-  const shellClass = compact ? "max-w-[238px]" : "max-w-[340px]";
-  const frameClass = compact ? "p-3.5" : "p-4";
-  const screenClass = compact ? "p-4.5" : "p-6";
+  const shellClass = compact ? "max-w-[272px]" : "max-w-[380px]";
+  const frameClass = compact ? "p-4" : "p-5";
+  const screenClass = compact ? "p-5" : "p-6.5";
   const titleWrapClass = compact
-    ? "mt-5 rounded-[1.6rem] border border-white/8 bg-white/[0.035] p-4"
-    : "mt-6 rounded-[1.85rem] border border-white/8 bg-white/[0.035] p-6";
+    ? "mt-5 rounded-[1.7rem] border border-white/8 bg-white/[0.035] p-5"
+    : "mt-6 rounded-[1.95rem] border border-white/8 bg-white/[0.035] p-6";
   const titleClass = compact
-    ? "text-[2rem] leading-none font-medium tracking-[-0.05em] text-white"
-    : "text-[2.4rem] leading-none font-medium tracking-[-0.05em] text-white";
-  const supportGridClass = compact ? "mt-5 grid grid-cols-3 gap-2" : "mt-6 grid grid-cols-3 gap-2.5";
+    ? "text-[2.2rem] leading-none font-medium tracking-[-0.05em] text-white"
+    : "text-[2.65rem] leading-none font-medium tracking-[-0.05em] text-white";
+  const supportGridClass = compact ? "mt-5 grid grid-cols-3 gap-2.5" : "mt-6 grid grid-cols-3 gap-3";
   const supportItemClass = compact
-    ? "rounded-[1rem] border border-white/8 bg-black/20 px-2.5 py-3 text-center text-[10px] text-white/72"
-    : "rounded-[1rem] border border-white/8 bg-black/20 px-3 py-3.5 text-center text-[11px] text-white/72";
-  const marketsClass = compact ? "mt-5 flex flex-wrap gap-2" : "mt-6 flex flex-wrap gap-2.5";
+    ? "rounded-[1rem] border border-white/8 bg-black/20 px-3 py-3.5 text-center text-[11px] text-white/72"
+    : "rounded-[1rem] border border-white/8 bg-black/20 px-3.5 py-4 text-center text-[11px] text-white/72";
+  const marketsClass = compact ? "mt-5 flex flex-wrap gap-2.5" : "mt-6 flex flex-wrap gap-3";
   const marketPillClass = compact
-    ? "rounded-full border border-white/10 bg-black/20 px-3 py-1.5 text-[10px] text-white/78"
-    : "rounded-full border border-white/10 bg-black/20 px-3.5 py-1.5 text-[11px] text-white/78";
+    ? "rounded-full border border-white/10 bg-black/20 px-3.5 py-1.5 text-[11px] text-white/78"
+    : "rounded-full border border-white/10 bg-black/20 px-4 py-1.5 text-[11px] text-white/78";
   const ctaClass = compact
     ? "mt-6 rounded-[1.35rem] border border-[#8d6a33] bg-[#2a2419] px-4 py-3 text-center text-sm font-medium text-[#ecd9a6]"
     : "mt-7 rounded-[1.5rem] border border-[#8d6a33] bg-[#2a2419] px-4 py-3.5 text-center text-sm font-medium text-[#ecd9a6]";

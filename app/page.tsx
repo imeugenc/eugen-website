@@ -95,7 +95,7 @@ export default function HomePage() {
 
           <div className="relative animate-rise opacity-0 [animation-delay:280ms] [animation-fill-mode:forwards]">
             <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold-300/12 blur-3xl" />
-            <div className="relative mx-auto max-w-md animate-float">
+            <div className="relative mx-auto max-w-[390px] animate-float">
               <AppPreview />
             </div>
           </div>
@@ -296,7 +296,7 @@ export default function HomePage() {
             <div className="panel relative overflow-hidden p-8 sm:p-10">
               <div className="absolute inset-x-12 top-10 h-24 rounded-full bg-gold-300/10 blur-3xl" />
               <div className="relative flex min-h-[420px] items-center justify-center">
-                <div className="mx-auto w-full max-w-[240px] animate-pulseSoft">
+                <div className="mx-auto w-full max-w-[272px] animate-pulseSoft">
                   <AppPreview compact />
                 </div>
               </div>
