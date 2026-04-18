@@ -61,7 +61,7 @@ export const tradingConcepts = [
 ] as const;
 
 export const aboutHighlights = [
-  "Trader de futures și crypto",
+  "Structură și claritate în analiză",
   "Focus pe proces, nu pe hype",
-  "Aplicație construită în jurul workflow-ului meu real"
+  "Tool construit în jurul modului real de lucru"
 ] as const;

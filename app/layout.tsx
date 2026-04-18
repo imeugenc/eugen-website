@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Eugen Costache | Trader & Builder",
+  title: "Market Mechanism",
   description:
-    "A premium personal website for Eugen Costache, presenting his trading perspective and mobile app in a clean, professional format.",
-  metadataBase: new URL("https://example.vercel.app")
+    "Market Mechanism este un proiect construit în jurul clarității, structurii și execuției, prezentat într-un format premium și minimalist.",
+  metadataBase: new URL("https://example.vercel.app"),
+  icons: {
+    icon: "/icon.png"
+  }
 };
 
 export default function RootLayout({
@@ -14,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ro">
       <body>{children}</body>
     </html>
   );
