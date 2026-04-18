@@ -96,8 +96,40 @@ export default function HomePage() {
 
           <div className="relative animate-rise opacity-0 [animation-delay:280ms] [animation-fill-mode:forwards]">
             <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold-300/12 blur-3xl" />
-            <div className="relative mx-auto max-w-[390px] animate-float">
-              <AppPreview />
+            <div className="panel relative mx-auto max-w-[420px] overflow-hidden p-6 sm:p-8 animate-float">
+              <div className="absolute inset-x-10 top-10 h-24 rounded-full bg-gold-300/10 blur-3xl" />
+              <div className="relative">
+                <p className="text-xs uppercase tracking-[0.32em] text-gold-200/82">Aplicația</p>
+                <h3 className="mt-4 text-3xl font-medium tracking-[-0.04em] text-white">
+                  Claritate și structură într-un singur loc.
+                </h3>
+                <p className="mt-4 max-w-sm text-sm leading-7 text-white/62">
+                  O prezentare simplă a modului în care urmăresc contextul, direcția zilei și
+                  review-ul de după execuție.
+                </p>
+                <div className="mt-8 grid gap-3">
+                  {appCards.map((card) => (
+                    <article
+                      key={card.title}
+                      className="rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.02))] px-5 py-5"
+                    >
+                      <p className="text-xs uppercase tracking-[0.3em] text-gold-200/82">
+                        {card.title}
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-2.5">
+                        {card.items.map((item) => (
+                          <span
+                            key={item}
+                            className="rounded-full border border-white/10 bg-black/20 px-3 py-1.5 text-xs text-white/76"
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
