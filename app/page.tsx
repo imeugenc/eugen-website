@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight, ChevronRight, Mail, Play } from "@/components/icons";
+import { ArrowUpRight, ChevronRight, Play } from "@/components/icons";
 import { SectionHeading } from "@/components/section-heading";
 import {
   aboutHighlights,
@@ -361,18 +361,28 @@ export default function HomePage() {
               <div>
                 <p className="text-xs uppercase tracking-[0.32em] text-gold-200">Contact</p>
                 <h2 className="mt-5 max-w-2xl text-3xl font-medium tracking-[-0.04em] text-white sm:text-4xl">
-                  Pentru moment, acesta este singurul canal de contact.
+                  Canalul principal de contact, momentan.
                 </h2>
-                <p className="mt-7 max-w-xl text-sm font-light italic tracking-[0.08em] text-white/76 sm:text-[0.95rem]">
+                <p className="mt-8 max-w-xl text-base leading-7 text-white/66">
+                  Pentru moment, acesta este singurul canal de contact.
+                </p>
+                <p className="mt-5 max-w-xl text-base leading-7 text-white/66">
                   Conturile de social media vor fi adăugate în curând.
                 </p>
-                <div className="mt-8 flex flex-col gap-4 text-white/70 sm:flex-row sm:flex-wrap sm:items-center">
+                <div className="mt-8 flex flex-col gap-4">
                   <a
-                    href="mailto:c.eugenbroker@gmail.com"
-                    className="inline-flex items-center gap-3 text-sm"
+                    href="mailto:hello@marketmechanism.xyz"
+                    className="w-fit text-base font-medium text-white/78 transition hover:text-gold-200 hover:underline"
                   >
-                    <Mail />
-                    c.eugenbroker@gmail.com
+                    hello@marketmechanism.xyz
+                  </a>
+                  <a
+                    href="https://x.com/mktmechanism"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-fit text-base font-medium text-white/78 transition hover:text-gold-200 hover:underline"
+                  >
+                    x.com/mktmechanism
                   </a>
                 </div>
               </div>
