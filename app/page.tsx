@@ -197,7 +197,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Piețe"
             title="Ce tranzacționez"
-            description="Un focus clar, selectiv și practic."
+            description="Un focus selectiv, clar și construit pentru context real."
           />
           <div className="panel overflow-hidden">
             <div className="grid gap-0 divide-y divide-white/8 lg:grid-cols-3 lg:divide-x lg:divide-y-0">
@@ -223,15 +223,15 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Proces"
             title="Cum lucrez"
-            description="Nu urmăresc setupuri „magice” și nu tranzacționez pe bază de semnale."
+            description="Fără semnale, fără zgomot și fără ideea unui shortcut."
           />
           <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
             <div className="panel bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.02))] p-8 sm:p-10">
-              <p className="text-lg leading-8 text-white/78">
+              <p className="max-w-xl text-lg leading-9 text-white/78">
                 Mă bazez pe structură, lichiditate și reacții în zone importante, nu pe ideea că
                 piața trebuie să îmi confirme o opinie dinainte.
               </p>
-              <ul className="mt-8 space-y-4 text-sm text-white/72">
+              <ul className="mt-10 max-w-xl space-y-4 text-sm leading-7 text-white/72">
                 {workPrinciples.map((item) => (
                   <li
                     key={item}
@@ -243,11 +243,11 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="panel p-8 sm:p-10">
-              <p className="text-lg leading-8 text-white/78">
+              <p className="max-w-xl text-lg leading-9 text-white/78">
                 Obiectivul nu este să existe dreptate de fiecare dată, ci execuție corectă,
                 constantă și disciplinată.
               </p>
-              <p className="mt-6 text-base leading-7 text-white/62">
+              <p className="mt-8 max-w-lg text-base leading-8 text-white/62">
                 Tradingul este un proces bazat pe disciplină, nu un shortcut.
               </p>
             </div>
@@ -258,7 +258,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Aplicația"
             title="Aplicația"
-            description="Un tool construit pentru claritate, structură și execuție."
+            description="Un tool gândit pentru structură clară, uz real și execuție disciplinată."
           />
           <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start lg:gap-14">
             <div className="panel p-8 sm:p-10">
@@ -363,7 +363,7 @@ export default function HomePage() {
                 <h2 className="mt-5 max-w-2xl text-3xl font-medium tracking-[-0.04em] text-white sm:text-4xl">
                   Pentru moment, acesta este singurul canal de contact.
                 </h2>
-                <p className="mt-6 max-w-2xl text-base leading-7 text-white/62">
+                <p className="mt-7 max-w-xl text-sm font-light italic tracking-[0.08em] text-white/76 sm:text-[0.95rem]">
                   Conturile de social media vor fi adăugate în curând.
                 </p>
                 <div className="mt-8 flex flex-col gap-4 text-white/70 sm:flex-row sm:flex-wrap sm:items-center">
