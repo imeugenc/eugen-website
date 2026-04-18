@@ -144,15 +144,15 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Despre"
             title="Un proiect construit în jurul clarității și execuției."
-            description="Market Mechanism păstrează un cadru simplu, disciplinat și credibil, fără zgomot inutil."
+            description="Un spațiu clar, disciplinat și atent structurat, prezentat fără zgomot inutil."
           />
           <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="panel p-8 sm:p-10">
-              <p className="text-sm uppercase tracking-[0.28em] text-gold-200/82">
+              <p className="text-base leading-7 text-white/74">
                 Market Mechanism este un proiect construit în jurul ideii de claritate și structură
                 în trading.
               </p>
-              <p className="mt-6 text-lg leading-8 text-white/78">
+              <p className="mt-6 text-base leading-7 text-white/64">
                 Nu este o platformă de educație și nu promite rezultate.
               </p>
               <p className="mt-6 text-base leading-7 text-white/62">
@@ -178,11 +178,11 @@ export default function HomePage() {
                   ))}
                 </ul>
                 <p className="mt-8 text-xs uppercase tracking-[0.3em] text-gold-200">Concepte</p>
-                <div className="mt-4 flex flex-wrap gap-2.5">
+                <div className="mt-4 flex flex-wrap gap-3">
                   {tradingConcepts.map((concept) => (
                     <span
                       key={concept}
-                      className="rounded-full border border-gold-300/14 bg-white/[0.035] px-3.5 py-2 text-xs tracking-[0.04em] text-white/72"
+                      className="rounded-full border border-gold-300/14 bg-white/[0.035] px-4 py-2 text-xs tracking-[0.05em] text-white/74"
                     >
                       {concept}
                     </span>

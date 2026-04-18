@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Market Mechanism",
-  description:
-    "Market Mechanism este un proiect construit în jurul clarității, structurii și execuției, prezentat într-un format premium și minimalist.",
+  description: "Structure over noise. A project focused on claritate, structură și execuție în trading.",
   metadataBase: new URL("https://example.vercel.app"),
   icons: {
     icon: "/icon.png"
@@ -18,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ro">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
