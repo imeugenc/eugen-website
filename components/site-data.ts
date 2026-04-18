@@ -24,9 +24,32 @@ export const workPrinciples = [
 ] as const;
 
 export const appBenefits = [
-  "Urmăresc piețele",
-  "Rămân disciplinat",
-  "Reduc zgomotul și haosul"
+  "Vezi mai clar contextul pieței",
+  "Înțelegi mai ușor direcția zilei",
+  "Reduci zgomotul și informația inutilă",
+  "Ai totul structurat într-un singur loc"
+] as const;
+
+export const appContents = [
+  "Daily bias pentru BTC și indici",
+  "Analize personalizate la cerere pe altcoins sau alți activi",
+  "After action review după fiecare daily bias",
+  "Un mod simplu și organizat de a urmări piețele"
+] as const;
+
+export const appCards = [
+  {
+    title: "Daily Bias",
+    items: ["BTC", "Indici"]
+  },
+  {
+    title: "Analize personalizate",
+    items: ["Altcoins", "Alți activi"]
+  },
+  {
+    title: "Review",
+    items: ["After Action", "Clar și organizat"]
+  }
 ] as const;
 
 export const tradingConcepts = [

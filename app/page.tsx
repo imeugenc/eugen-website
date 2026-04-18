@@ -1,9 +1,10 @@
 import { ArrowUpRight, ChevronRight, Mail, Play, Smartphone } from "@/components/icons";
-import { AppPreview } from "@/components/app-preview";
 import { SectionHeading } from "@/components/section-heading";
 import {
   aboutHighlights,
   appBenefits,
+  appCards,
+  appContents,
   tradeCategories,
   tradingConcepts,
   workPrinciples
@@ -229,43 +230,52 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Aplicația"
             title="Aplicația"
-            description="Un tool gândit pentru claritate și uz real."
+            description="Un tool construit pentru claritate, structură și execuție."
           />
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-12">
+          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start lg:gap-14">
             <div className="panel p-8 sm:p-10">
               <div className="inline-flex items-center gap-3 rounded-full border border-gold-300/20 bg-gold-300/8 px-4 py-2 text-xs uppercase tracking-[0.25em] text-gold-200">
                 <Smartphone />
                 Gândită pentru mobil
               </div>
               <h3 className="mt-8 max-w-xl text-3xl font-medium tracking-[-0.04em] text-white sm:text-4xl">
-                Un tool gândit pentru claritate și uz real.
+                Un tool construit pentru claritate, structură și execuție.
               </h3>
               <p className="mt-6 max-w-lg text-base leading-7 text-white/68">
-                Construiesc o aplicație mobilă care reflectă exact modul în care gândesc și
-                lucrez.
+                Aplicația reflectă modul meu real de lucru și este construită ca un spațiu simplu
+                și organizat, prin care împărtășesc modul în care văd eu piața.
               </p>
               <p className="mt-6 max-w-lg text-base leading-7 text-white/62">
                 Nu este o aplicație de semnale și nu promite rezultate.
               </p>
-              <p className="mt-6 max-w-lg text-base leading-7 text-white/62">
-                Aplicația este construită în jurul modului meu real de lucru: un spațiu simplu și
-                organizat, prin care împărtășesc perspectiva mea asupra pieței, într-un mod clar și
-                fără zgomot inutil.
-              </p>
-              <ul className="mt-8 max-w-md space-y-3">
-                {appBenefits.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 rounded-[1rem] border border-white/10 bg-white/[0.025] px-4 py-3 text-sm text-white/78"
-                  >
-                    <span className="h-2 w-2 rounded-full bg-gold-300" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-8 max-w-lg text-base leading-7 text-white/62">
-                Totul este gândit pentru mobil: rapid, clar și fără complicații.
-              </p>
+              <div className="mt-10 max-w-xl">
+                <p className="text-xs uppercase tracking-[0.3em] text-gold-200">Ce conține</p>
+                <ul className="mt-5 space-y-3">
+                  {appContents.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 rounded-[1rem] border border-white/10 bg-white/[0.025] px-4 py-3 text-sm leading-6 text-white/78"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gold-300" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-10 max-w-xl">
+                <p className="text-xs uppercase tracking-[0.3em] text-gold-200">Beneficii</p>
+                <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                  {appBenefits.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 rounded-[1rem] border border-white/10 bg-white/[0.025] px-4 py-3 text-sm leading-6 text-white/78"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gold-300" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <div className="mt-10 flex flex-wrap gap-3">
                 <a href={appLinks.open} className="button-primary">
                   În curând
@@ -294,11 +304,29 @@ export default function HomePage() {
             </div>
 
             <div className="panel relative overflow-hidden p-8 sm:p-10">
-              <div className="absolute inset-x-12 top-10 h-24 rounded-full bg-gold-300/10 blur-3xl" />
-              <div className="relative flex min-h-[420px] items-center justify-center">
-                <div className="mx-auto w-full max-w-[272px] animate-pulseSoft">
-                  <AppPreview compact />
-                </div>
+              <div className="absolute inset-x-16 top-10 h-24 rounded-full bg-gold-300/10 blur-3xl" />
+              <div className="relative grid gap-4">
+                {appCards.map((card, index) => (
+                  <article
+                    key={card.title}
+                    className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.02))] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.22)]"
+                    style={{ transform: `translateX(${index === 1 ? "12px" : index === 2 ? "24px" : "0px"})` }}
+                  >
+                    <p className="text-xs uppercase tracking-[0.3em] text-gold-200/82">
+                      {card.title}
+                    </p>
+                    <div className="mt-5 flex flex-wrap gap-2.5">
+                      {card.items.map((item) => (
+                        <span
+                          key={item}
+                          className="rounded-full border border-white/10 bg-black/20 px-3.5 py-2 text-sm text-white/78"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </article>
+                ))}
               </div>
             </div>
           </div>
