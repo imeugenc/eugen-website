@@ -4,8 +4,20 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Market Mechanism",
-  description: "Structure over noise. A project focused on claritate, structură și execuție în trading.",
-  metadataBase: new URL("https://example.vercel.app"),
+  description: "Structure over noise. A project focused on clarity, structure and execution in trading.",
+  metadataBase: new URL("https://marketmechanism.xyz"),
+  alternates: {
+    canonical: "https://marketmechanism.xyz"
+  },
+  openGraph: {
+    title: "Market Mechanism",
+    description: "Structure over noise. A project focused on clarity, structure and execution in trading.",
+    url: "https://marketmechanism.xyz"
+  },
+  robots: {
+    index: true,
+    follow: true
+  },
   icons: {
     icon: "/icon.png"
   }
