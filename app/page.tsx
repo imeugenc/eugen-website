@@ -12,10 +12,7 @@ import {
 } from "@/components/site-data";
 
 const appLinks = {
-  open: "#",
   about: "#about",
-  appStore: "#",
-  googlePlay: "#",
   mail: "mailto:hello@marketmechanism.xyz",
   x: "https://x.com/mktmechanism"
 };
@@ -28,7 +25,7 @@ export default function HomePage() {
 
       <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 pb-12 pt-6 sm:px-8 lg:px-12">
         <header className="sticky top-0 z-30 -mx-6 border-b border-white/5 bg-canvas/80 px-6 py-4 backdrop-blur-xl sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
-          <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
             <a href="#top" className="flex items-center gap-3">
               <Image
                 src="/market-mechanism-mark.png"
@@ -41,6 +38,17 @@ export default function HomePage() {
                 Market Mechanism
               </span>
             </a>
+            <nav className="flex items-center gap-4 text-xs text-white/70 md:hidden">
+              <a href="#about" className="transition hover:text-white">
+                Despre
+              </a>
+              <a href="#app" className="transition hover:text-white">
+                Aplicația
+              </a>
+              <a href="#contact" className="transition hover:text-white">
+                Contact
+              </a>
+            </nav>
             <div className="hidden items-center gap-6 md:flex">
               <nav className="flex items-center gap-8 text-sm text-white/72">
                 <a href="#about" className="transition hover:text-white">
@@ -101,10 +109,10 @@ export default function HomePage() {
               este privită piața, fără zgomot inutil.
             </p>
             <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-              <a href={appLinks.open} className="button-primary">
+              <button type="button" disabled className="button-primary cursor-default opacity-85">
                 În curând
                 <ArrowUpRight />
-              </a>
+              </button>
               <a href={appLinks.about} className="button-secondary">
                 Despre
                 <ChevronRight />
@@ -132,7 +140,7 @@ export default function HomePage() {
               <div className="relative">
                 <p className="text-xs uppercase tracking-[0.32em] text-gold-200/82">Aplicația</p>
                 <h3 className="mt-4 text-3xl font-medium tracking-[-0.04em] text-white">
-                  Daily bias, analiză și review într-un format clar.
+                  Bias zilnic, analiză și revizuire într-un format clar.
                 </h3>
                 <p className="mt-4 max-w-sm text-sm leading-7 text-white/62">
                   O prezentare simplă a structurii aplicației, construită ca un produs clar și
@@ -169,7 +177,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Despre"
             title="Un proiect construit în jurul clarității și execuției."
-            description="Un proiect construit în jurul clarității și execuției."
+            description="Claritate, structură și disciplină, fără promisiuni inutile."
           />
           <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="panel p-8 sm:p-10">
@@ -330,26 +338,28 @@ export default function HomePage() {
                 </ul>
               </div>
               <div className="mt-10 flex flex-wrap gap-4">
-                <a href={appLinks.open} className="button-primary">
+                <button type="button" disabled className="button-primary cursor-default opacity-85">
                   În curând
                   <ArrowUpRight />
-                </a>
-                <a
-                  href={appLinks.appStore}
+                </button>
+                <button
+                  type="button"
+                  disabled
                   aria-disabled="true"
                   className="button-secondary cursor-default opacity-50"
                 >
                   App Store
                   <Play />
-                </a>
-                <a
-                  href={appLinks.googlePlay}
+                </button>
+                <button
+                  type="button"
+                  disabled
                   aria-disabled="true"
                   className="button-secondary cursor-default opacity-50"
                 >
                   Google Play
                   <Play />
-                </a>
+                </button>
               </div>
               <p className="mt-4 text-sm text-gold-200/78">
                 Linkurile și accesul direct vor fi adăugate când aplicația este gata.
