@@ -12,6 +12,7 @@ import {
 } from "@/components/site-data";
 
 const appLinks = {
+  open: "https://app.marketmechanism.xyz",
   about: "#about",
   mail: "mailto:hello@marketmechanism.xyz",
   x: "https://x.com/mktmechanism"
@@ -109,16 +110,16 @@ export default function HomePage() {
               este privită piața, fără zgomot inutil.
             </p>
             <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-              <button type="button" disabled className="button-primary cursor-default opacity-85">
-                În curând
+              <a href={appLinks.open} className="button-primary">
+                Mergi către aplicație
                 <ArrowUpRight />
-              </button>
+              </a>
               <a href={appLinks.about} className="button-secondary">
                 Despre
                 <ChevronRight />
               </a>
             </div>
-            <p className="mt-3 text-sm text-gold-200/78">Aplicația va fi disponibilă în curând.</p>
+            <p className="mt-3 text-sm text-gold-200/78">Acces direct către aplicația web.</p>
             <div className="mt-14 grid gap-5 border-t border-white/10 pt-8 sm:grid-cols-3">
               {[
                 ["Piețe", "NASDAQ, ES, BTC, ETH"],
@@ -338,10 +339,10 @@ export default function HomePage() {
                 </ul>
               </div>
               <div className="mt-10 flex flex-wrap gap-4">
-                <button type="button" disabled className="button-primary cursor-default opacity-85">
-                  În curând
+                <a href={appLinks.open} className="button-primary">
+                  Mergi către aplicație
                   <ArrowUpRight />
-                </button>
+                </a>
                 <button
                   type="button"
                   disabled
@@ -362,7 +363,7 @@ export default function HomePage() {
                 </button>
               </div>
               <p className="mt-4 text-sm text-gold-200/78">
-                Linkurile și accesul direct vor fi adăugate când aplicația este gata.
+                Accesul direct este disponibil acum. App Store și Google Play vor fi adăugate ulterior.
               </p>
             </div>
             <div className="panel relative overflow-hidden p-8 sm:p-10">
